@@ -1,0 +1,458 @@
+Last login: Tue Jan 17 19:51:17 on ttys000
+-bash: /usr/local/Cellar/nvm/0.33.0/nvm.sh: No such file or directory
+~ 
+→ cd documents
+~/documents 
+→ cd MyProjects
+~/documents/MyProjects - ⋆
+→ ls
+another.txt hello.txt
+~/documents/MyProjects - ⋆
+→ touch hello.txt another.txt
+~/documents/MyProjects - ⋆
+→ ls
+another.txt hello.txt
+~/documents/MyProjects - ⋆
+→ mv another.txt anotherfile.txt
+~/documents/MyProjects - ⋆
+→ ls
+anotherfile.txt hello.txt
+~/documents/MyProjects - ⋆
+→ pwd
+/Users/tech-a10/documents/MyProjects
+~/documents/MyProjects - ⋆
+→ git init
+Reinitialized existing Git repository in /Users/tech-a10/Documents/MyProjects/.git/
+~/documents/MyProjects - ⋆
+→ ls -a
+.               ..              .git            anotherfile.txt hello.txt
+~/documents/MyProjects - ⋆
+→ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+Did you mean this?
+	add
+~/documents/MyProjects - ⋆
+→ git add .
+~/documents/MyProjects - ⋆
+→ ls
+anotherfile.txt hello.txt
+~/documents/MyProjects - ⋆
+→ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   anotherfile.txt
+	new file:   hello.txt
+
+~/documents/MyProjects - ⋆
+→ git commit -m "Initial commit"
+[master (root-commit) 3e6528f] Initial commit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 anotherfile.txt
+ create mode 100644 hello.txt
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+nothing to commit, working directory clean
+~/documents/MyProjects - ⋆master
+→ ls
+anotherfile.txt hello.txt
+~/documents/MyProjects - ⋆master
+→ subl hello.txt
+~/documents/MyProjects - ⋆master
+→ subl anotherfile.txt
+~/documents/MyProjects - ⋆master
+→ cat hello.txt
+~/documents/MyProjects - ⋆master
+→ cat hello.txt
+Yo, hows it going~/documents/MyProjects - ⋆master
+→ cat anotherfile.txt
+Yeah not too bad thanks, yourself?~/documents/MyProjects - ⋆master
+→ tree
+.
+├── anotherfile.txt
+└── hello.txt
+
+0 directories, 2 files
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/documents/MyProjects - ⋆master
+→ touch new.txt
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/documents/MyProjects - ⋆master
+→ git diff
+diff --git a/anotherfile.txt b/anotherfile.txt
+index e69de29..fbc439e 100644
+--- a/anotherfile.txt
++++ b/anotherfile.txt
+@@ -0,0 +1 @@
++Yeah not too bad thanks, yourself?
+\ No newline at end of file
+diff --git a/hello.txt b/hello.txt
+index e69de29..43f47f0 100644
+--- a/hello.txt
++++ b/hello.txt
+@@ -0,0 +1 @@
++Yo, hows it going
+\ No newline at end of file
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	new.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/documents/MyProjects - ⋆master
+→ git diff
+diff --git a/anotherfile.txt b/anotherfile.txt
+index e69de29..fbc439e 100644
+--- a/anotherfile.txt
++++ b/anotherfile.txt
+@@ -0,0 +1 @@
++Yeah not too bad thanks, yourself?
+\ No newline at end of file
+diff --git a/hello.txt b/hello.txt
+index e69de29..43f47f0 100644
+--- a/hello.txt
++++ b/hello.txt
+@@ -0,0 +1 @@
++Yo, hows it going
+\ No newline at end of file
+~/documents/MyProjects - ⋆master
+→ git add .
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+	new file:   new.txt
+
+~/documents/MyProjects - ⋆master
+→ git diff --staged
+diff --git a/anotherfile.txt b/anotherfile.txt
+index e69de29..fbc439e 100644
+--- a/anotherfile.txt
++++ b/anotherfile.txt
+@@ -0,0 +1 @@
++Yeah not too bad thanks, yourself?
+\ No newline at end of file
+diff --git a/hello.txt b/hello.txt
+index e69de29..43f47f0 100644
+--- a/hello.txt
++++ b/hello.txt
+@@ -0,0 +1 @@
++Yo, hows it going
+\ No newline at end of file
+diff --git a/new.txt b/new.txt
+new file mode 100644
+index 0000000..e69de29
+~/documents/MyProjects - ⋆master
+→ git commit -m "Edited hello text and anotherfile text files"
+[master 42cb6f8] Edited hello text and anotherfile text files
+ 3 files changed, 2 insertions(+)
+ create mode 100644 new.txt
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+nothing to commit, working directory clean
+~/documents/MyProjects - ⋆master
+→ git log
+commit 42cb6f869ca5b8fb7f74e40dc8265f15d8c559c5
+Author: Karanpal Chaggar <kchaggar@spartaglobal.co>
+Date:   Tue Jan 17 20:18:10 2017 +0000
+
+    Edited hello text and anotherfile text files
+
+commit 3e6528fc6daf30033cabc0cbb0ce47749a4ea7d4
+Author: Karanpal Chaggar <kchaggar@spartaglobal.co>
+Date:   Tue Jan 17 20:09:54 2017 +0000
+
+    Initial commit
+~/documents/MyProjects - ⋆master
+→ git log --oneline
+42cb6f8 Edited hello text and anotherfile text files
+3e6528f Initial commit
+~/documents/MyProjects - ⋆master
+→ git log --oneline --graph
+* 42cb6f8 Edited hello text and anotherfile text files
+* 3e6528f Initial commit
+~/documents/MyProjects - ⋆master
+→ git log --oneline --graph --decorate
+* 42cb6f8 (HEAD -> master) Edited hello text and anotherfile text files
+* 3e6528f Initial commit
+~/documents/MyProjects - ⋆master
+→ subl hello.txt
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+nothing to commit, working directory clean
+~/documents/MyProjects - ⋆master
+→ subl hello.txt
+~/documents/MyProjects - ⋆master
+→ subl anotherfile.txt
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/documents/MyProjects - ⋆master
+→ git diff
+diff --git a/anotherfile.txt b/anotherfile.txt
+index fbc439e..de9c433 100644
+--- a/anotherfile.txt
++++ b/anotherfile.txt
+@@ -1 +1 @@
+-Yeah not too bad thanks, yourself?
+\ No newline at end of file
++Yeah not too bad thanks, yourself? Thanks
+\ No newline at end of file
+diff --git a/hello.txt b/hello.txt
+index 43f47f0..53cdcba 100644
+--- a/hello.txt
++++ b/hello.txt
+@@ -1 +1 @@
+-Yo, hows it going
+\ No newline at end of file
++Yo, hows it going. Lad
+\ No newline at end of file
+~/documents/MyProjects - ⋆master
+→ git checkout
+M	anotherfile.txt
+M	hello.txt
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/documents/MyProjects - ⋆master
+→ git log
+commit 42cb6f869ca5b8fb7f74e40dc8265f15d8c559c5
+Author: Karanpal Chaggar <kchaggar@spartaglobal.co>
+Date:   Tue Jan 17 20:18:10 2017 +0000
+
+    Edited hello text and anotherfile text files
+
+commit 3e6528fc6daf30033cabc0cbb0ce47749a4ea7d4
+Author: Karanpal Chaggar <kchaggar@spartaglobal.co>
+Date:   Tue Jan 17 20:09:54 2017 +0000
+
+    Initial commit
+~/documents/MyProjects - ⋆master
+→ git reset --soft HEAD^
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+	new file:   new.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+
+~/documents/MyProjects - ⋆master
+→ git commit -m "restage the past commit"
+[master 3793bea] restage the past commit
+ 3 files changed, 2 insertions(+)
+ create mode 100644 new.txt
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/documents/MyProjects - ⋆master
+→ git add newfile001.txt
+fatal: pathspec 'newfile001.txt' did not match any files
+~/documents/MyProjects - ⋆master
+→ got statis
+-bash: got: command not found
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/documents/MyProjects - ⋆master
+→ touch newfile001.txt newfile002.txt
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	newfile001.txt
+	newfile002.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/documents/MyProjects - ⋆master
+→ git add newfile001.txt
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   newfile001.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	newfile002.txt
+
+~/documents/MyProjects - ⋆master
+→ git commit -m "Added one new file"
+[master 1c6d5a3] Added one new file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newfile001.txt
+~/documents/MyProjects - ⋆master
+→ git log --oneline --graph --decorate
+* 1c6d5a3 (HEAD -> master) Added one new file
+* 3793bea restage the past commit
+* 3e6528f Initial commit
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	newfile002.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/documents/MyProjects - ⋆master
+→ git log
+commit 1c6d5a375b688647dd6c60a957a9a37dfb66621c
+Author: Karanpal Chaggar <kchaggar@spartaglobal.co>
+Date:   Tue Jan 17 20:28:00 2017 +0000
+
+    Added one new file
+
+commit 3793bea3d0fb29359cd1ce07b7d2bc279497f28a
+Author: Karanpal Chaggar <kchaggar@spartaglobal.co>
+Date:   Tue Jan 17 20:25:16 2017 +0000
+
+    restage the past commit
+
+commit 3e6528fc6daf30033cabc0cbb0ce47749a4ea7d4
+Author: Karanpal Chaggar <kchaggar@spartaglobal.co>
+Date:   Tue Jan 17 20:09:54 2017 +0000
+
+    Initial commit
+~/documents/MyProjects - ⋆master
+→ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   anotherfile.txt
+	modified:   hello.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	newfile002.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/documents/MyProjects - ⋆master
+→ 
